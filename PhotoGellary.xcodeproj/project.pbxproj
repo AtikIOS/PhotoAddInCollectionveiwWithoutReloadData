@@ -17,6 +17,10 @@
 		BB5C443E2C6BC7040020832B /* PhotoGellaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5C443D2C6BC7040020832B /* PhotoGellaryTests.swift */; };
 		BB5C44482C6BC7040020832B /* PhotoGellaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5C44472C6BC7040020832B /* PhotoGellaryUITests.swift */; };
 		BB5C444A2C6BC7040020832B /* PhotoGellaryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5C44492C6BC7040020832B /* PhotoGellaryUITestsLaunchTests.swift */; };
+		BB5C445D2C6BC7710020832B /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB5C445C2C6BC7710020832B /* CustomCollectionViewCell.xib */; };
+		BB5C445E2C6BC7710020832B /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5C445B2C6BC7710020832B /* CustomCollectionViewCell.swift */; };
+		BB5C44612C6BD0080020832B /* Photos+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5C445F2C6BD0080020832B /* Photos+CoreDataClass.swift */; };
+		BB5C44622C6BD0080020832B /* Photos+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5C44602C6BD0080020832B /* Photos+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		BB5C44432C6BC7040020832B /* PhotoGellaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGellaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB5C44472C6BC7040020832B /* PhotoGellaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGellaryUITests.swift; sourceTree = "<group>"; };
 		BB5C44492C6BC7040020832B /* PhotoGellaryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGellaryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BB5C445B2C6BC7710020832B /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		BB5C445C2C6BC7710020832B /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
+		BB5C445F2C6BD0080020832B /* Photos+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photos+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BB5C44602C6BD0080020832B /* Photos+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photos+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +109,13 @@
 		BB5C44222C6BC7020020832B /* PhotoGellary */ = {
 			isa = PBXGroup;
 			children = (
-				BB5C44232C6BC7020020832B /* AppDelegate.swift */,
-				BB5C44252C6BC7020020832B /* SceneDelegate.swift */,
-				BB5C44272C6BC7020020832B /* ViewController.swift */,
-				BB5C44292C6BC7020020832B /* Main.storyboard */,
+				BB5C44562C6BC72F0020832B /* Delegate */,
+				BB5C44632C6BD0110020832B /* Model */,
+				BB5C44582C6BC73B0020832B /* View */,
+				BB5C44572C6BC7350020832B /* Controller */,
 				BB5C442F2C6BC7040020832B /* Assets.xcassets */,
-				BB5C44312C6BC7040020832B /* LaunchScreen.storyboard */,
 				BB5C44342C6BC7040020832B /* Info.plist */,
-				BB5C442C2C6BC7020020832B /* PhotoGellary.xcdatamodeld */,
+				BB5C44592C6BC7430020832B /* Database */,
 			);
 			path = PhotoGellary;
 			sourceTree = "<group>";
@@ -128,6 +135,59 @@
 				BB5C44492C6BC7040020832B /* PhotoGellaryUITestsLaunchTests.swift */,
 			);
 			path = PhotoGellaryUITests;
+			sourceTree = "<group>";
+		};
+		BB5C44562C6BC72F0020832B /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				BB5C44232C6BC7020020832B /* AppDelegate.swift */,
+				BB5C44252C6BC7020020832B /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		BB5C44572C6BC7350020832B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BB5C44272C6BC7020020832B /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BB5C44582C6BC73B0020832B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BB5C445A2C6BC7590020832B /* CollectionViewCell */,
+				BB5C44292C6BC7020020832B /* Main.storyboard */,
+				BB5C44312C6BC7040020832B /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BB5C44592C6BC7430020832B /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				BB5C442C2C6BC7020020832B /* PhotoGellary.xcdatamodeld */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		BB5C445A2C6BC7590020832B /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BB5C445B2C6BC7710020832B /* CustomCollectionViewCell.swift */,
+				BB5C445C2C6BC7710020832B /* CustomCollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		BB5C44632C6BD0110020832B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BB5C445F2C6BD0080020832B /* Photos+CoreDataClass.swift */,
+				BB5C44602C6BD0080020832B /* Photos+CoreDataProperties.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +297,7 @@
 				BB5C44302C6BC7040020832B /* Assets.xcassets in Resources */,
 				BB5C44332C6BC7040020832B /* Base in Resources */,
 				BB5C442B2C6BC7020020832B /* Base in Resources */,
+				BB5C445D2C6BC7710020832B /* CustomCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,8 +323,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB5C44282C6BC7020020832B /* ViewController.swift in Sources */,
+				BB5C445E2C6BC7710020832B /* CustomCollectionViewCell.swift in Sources */,
 				BB5C44242C6BC7020020832B /* AppDelegate.swift in Sources */,
 				BB5C44262C6BC7020020832B /* SceneDelegate.swift in Sources */,
+				BB5C44612C6BD0080020832B /* Photos+CoreDataClass.swift in Sources */,
+				BB5C44622C6BD0080020832B /* Photos+CoreDataProperties.swift in Sources */,
 				BB5C442E2C6BC7020020832B /* PhotoGellary.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
